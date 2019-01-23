@@ -1,6 +1,6 @@
 # Udacity: Unit 4 Project: Catalog
 
-One Paragraph of project description goes here
+This app is a catalog for a store
 
 ## Getting Started
 
