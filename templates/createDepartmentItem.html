@@ -1,0 +1,27 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+	<div class="container">
+		<div class="wholeContainer">
+			<form action="#" method = "POST">
+				<div class="form-group">
+					<label for="department">Department:</label>
+					<input type ="text" class="form-control" maxlength="100" name="department" value="{{department.name}}" disabled>
+					<br>
+					<label for="name">Name:</label>
+					<input type ="text" class="form-control" maxlength="100" name="name" required>
+					<br>
+					<label for="description">Description:</label>
+					<input type ="text" class="form-control" maxlength="100" name="description" required>
+					<br>
+					<label for="price">Price:</label>
+					<input type ="text" class="form-control" maxlength="100" name="price" value="$" required>
+					<br>
+					<div class="padding-bottom"></div>
+					<button type="submit" id="submit" type="submit">Create</button>
+					<button><a class="button" href="{{ url_for('showDepartments') }}">Cancel</a></button>
+				</div>
+			</form>
+		</div>
+	</div>
+{% endblock %}

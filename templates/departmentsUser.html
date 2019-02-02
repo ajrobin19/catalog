@@ -1,0 +1,25 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+	<div class="container">
+		<div class="departments">
+			<div class="createDepartmentItem"><a href="{{ url_for('createDepartment') }}">Create New Department</a></div>
+			<h1>Departments</h1>
+			<ul>
+				{% for department in departments %}
+				<li>
+					<span>
+						<a class="departmentItemLinks" href="{{ url_for('showDepartmentItems', department_id=department.id) }}">{{ department.name }}</a>
+					
+						<a class="editDelete" href="{{ url_for('editDepartment', department_id=department.id) }}">Edit</a>
+						<a class="editDelete" href="{{ url_for('deleteDepartment', department_id=department.id) }}">Delete</a>
+					</span>
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="items">
+			<div class="createDepartmentItem JSON"><a href="{{ url_for('departmentsJSON') }}">Entire Item List - JSON</a></div>
+		</div>
+	</div>
+{% endblock %}

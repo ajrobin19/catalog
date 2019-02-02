@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/Article">
+<head>
+	{% if path %}
+		<title>Ducky's Sports Emporium - {{ path }}</title>
+	{% else %}
+		<title>Ducky's Sports Emporium</title>
+	{% endif %}
+	<link href="https://fonts.googleapis.com/css?family=Graduate|Open+Sans|Permanent+Marker" rel="stylesheet">
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="https://img.icons8.com/color/96/000000/trophy.png">
+	<!-- <a href="https://icons8.com/icon/16951/trophy">Trophy icon by Icons8</a> -->
+	{% if path == 'login' %}
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script src="//apis.google.com/js/platform.js?onload=start"> </script>
+	{% endif %}
+</head>
+<body>
+	<div class = 'flash'>
+		  {% with messages = get_flashed_messages() %}
+	      {% if messages %}  
+	        <ul>
+	        {% for message in messages %}
+	            <li> <strong> {{ message }} </strong> </li>
+	        {% endfor %}
+	        </ul>
+	        {% endif %}
+	    {% endwith %}
+	</div>
+	{% block content %}
+	{% endblock %}
+</body>
+</html>

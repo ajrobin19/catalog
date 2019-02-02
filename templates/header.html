@@ -1,0 +1,11 @@
+
+<div class="header">
+	<div class="login">
+		{% if 'username' in session %}
+			<div><a href="{{ url_for('disconnect') }}">Hello {{ session.username }}, Logout.</a></div>
+		{% else %}
+			<div><a href="{{ url_for('showLogin') }}">Click here to log in</a></div>
+		{% endif %}
+	</div>
+	<h1><a href="{{ url_for('showDepartments') }}">Ducky's Sports Emporium</a></h1>
+</div>
