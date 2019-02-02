@@ -1,88 +1,40 @@
 # Udacity: Unit 4 Project: Catalog
 
-This app is a catalog for a store
+This app is a catalog for a sports store.
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites
+#### Prerequisites to run the application
 
-What things you need to install the software and how to install them
+* Install Flask with `pip install Flask`.
+* Install SQLAlchemy with `pip install SQLAlchemy`.
+* Install oauth2client with `pip install oauth2client`.
+* Install apiclient with `pip install apiclient`.
 
-```
-Give examples
-```
+#### Installing the files
 
-### Installing
+* Copy the project files including the `application.py` file into the vagrant folder that is accessible in your virtual machine.
 
-A step by step series of examples that tell you how to get a development env running
+## Running the application
 
-Say what the step will be
+#### Setting up the server
+* Go to the location of your vagrant virtual machine.
+* Start up your virtual machine with `vagrant up`.
+* Log into your virtual machine with `vagrant ssh`.
+* Navigate into the catalog folder within the vagrant folder and start the server with `python application.py`.
 
-```
-Give the example
-```
+### Using the appliction
+* In your browser of choice go to [http://localhost:8000](http://localhost:8000)
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-
+##### Navigating the application
+* Using the navbar
+	* The store name also doubles as link to return home.
+	* on the right side of the navbar is a place to sign in/ sign out with a Google account
+* The homepage displays all of the departments from the store database.
+	* If the user is logged in they can add, edit, or delete departments
+* If a department name is clicked, it will display all of the items for that department from the store database.
+	* If the user is logged in they can add, edit, or delete the items in the department
+* If an item name is clicked, it will display all of the information for that item from the store database.
+	* If the user is logged in they can add, edit, or delete the item

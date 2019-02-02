@@ -20,6 +20,8 @@ body {
 /* Header Bar */
 .header{
 	width: 80vw;
+	min-width: 650px;
+	max-width: 850px;
 	background: #336B87;
 	height: 8vh;
 	color: #FFFFFF;
@@ -69,7 +71,9 @@ body {
 .container{
 	background: #FFFFFF;
 	width: 70vw;
-	min-height: 90vh;
+	min-width: 650px;
+	max-width: 850px;
+	min-height: 75vh;
 	margin: 0 auto;
 	display: flex;
 }
@@ -142,4 +146,24 @@ body {
 .right{
 	position: absolute;
 	right: 10px;
+}
+
+/* Responsive Screen Breaks */
+@media screen and (min-width: 650px) and (max-width: 1000px) {
+	body{
+		font-size: smaller;
+	}
+}
+@media screen and (max-width: 649px) {
+	.header{
+		width: 100vw;
+	}
+	.container{
+		width: 100vw;
+	}
+	body{
+		font-size: smaller;
+		background-image: none;
+	}
+
 }
